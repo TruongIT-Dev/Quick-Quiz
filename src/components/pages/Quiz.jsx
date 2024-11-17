@@ -1,10 +1,11 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Modal, Button, Image } from 'antd';
 import { questions } from '../../apis/question';
 import { replace, useNavigate } from 'react-router-dom';
 
 import '../../assets/css/quiz.css';
 import '../../index.css';
+import backgroundMusic from '../../assets/audio/shy-keep-wanting.m4a';
 
 import Image1 from '../../assets/img/question/chibi-ques-1.jpg';
 import Image2 from '../../assets/img/question/chibi-ques-2.jpg';
@@ -40,6 +41,52 @@ const QuizPage = () => {
     const [currentIncorrectImage, setCurrentIncorrectImage] = useState(Math.floor(Math.random() * IncorrectImages.length));
 
     const currentQuestion = questions[currentQuestionIndex];
+
+    // Helper function to fade-in volume
+    const fadeIn = (audio, maxVolume = 1, duration = 2000) => {
+        let volume = 0;
+        const step = maxVolume / (duration / 100);
+
+        audio.volume = volume;
+        const fadeInterval = setInterval(() => {
+            volume += step;
+            if (volume >= maxVolume) {
+                volume = maxVolume;
+                clearInterval(fadeInterval);
+            }
+            audio.volume = volume;
+        }, 100);
+    };
+
+    // Helper function to fade-out volume
+    const fadeOut = (audio, duration = 2000) => {
+        const step = audio.volume / (duration / 100);
+
+        const fadeInterval = setInterval(() => {
+            audio.volume -= step;
+            if (audio.volume <= 0) {
+                audio.volume = 0;
+                clearInterval(fadeInterval);
+                audio.pause(); // Pause when volume reaches 0
+            }
+        }, 100);
+    };
+
+    // Play background music with fade-in and handle fade-out on cleanup
+    useEffect(() => {
+        const audio = new Audio(backgroundMusic);
+        audio.loop = true;
+        audio.volume = 0; // Start at zero volume
+        audio.play();
+
+        // Fade in to full volume
+        fadeIn(audio, 0.5, 5000); // Adjust maxVolume and duration as needed
+
+        // Cleanup to fade-out when component unmounts
+        return () => {
+            fadeOut(audio, 2000); // Adjust duration as needed
+        };
+    }, []);
 
     const handleChoiceClick = (choice) => {
         setSelectedChoice(choice);
