@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { Button, Divider, Modal } from 'antd';
 import { useNavigate } from 'react-router-dom';
 
-import Capybara from '../assets/img/meme/capybara-end.jpg'
+import Capybara from '../../assets/img/meme/capybara-end.jpg'
 
 export default function EndingPage() {
     const [isModalOpen, setIsModalOpen] = useState(false);

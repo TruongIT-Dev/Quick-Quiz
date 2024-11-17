@@ -1,10 +1,9 @@
 import { Image } from "antd";
 import '../../App.css';
 
-import Meme1 from '../assets/img/meme/meme-1.jpg';
-import Meme2 from '../assets/img/meme/meme-2.jpg';
-import Meme3 from '../assets/img/meme/meme-3.jpg';
-import Meme4 from '../assets/img/meme/meme-4.jpg';
+
+import Meme2 from '../../assets/img/meme/meme-2.jpg';
+
 
 
 export default function NotObeyRule() {

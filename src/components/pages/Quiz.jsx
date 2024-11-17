@@ -6,20 +6,20 @@ import { useNavigate } from 'react-router-dom';
 import '../../assets/css/quiz.css';
 import '../../index.css';
 
-import Image1 from '../assets/img/question/chibi-ques-1.jpg';
-import Image2 from '../assets/img/question/chibi-ques-2.jpg';
-import Image3 from '../assets/img/question/chibi-ques-3.jpg';
-import Image4 from '../assets/img/question/chibi-ques-4.jpg';
-import Image5 from '../assets/img/question/chibi-ques-5.jpg';
+import Image1 from '../../assets/img/question/chibi-ques-1.jpg';
+import Image2 from '../../assets/img/question/chibi-ques-2.jpg';
+import Image3 from '../../assets/img/question/chibi-ques-3.jpg';
+import Image4 from '../../assets/img/question/chibi-ques-4.jpg';
+import Image5 from '../../assets/img/question/chibi-ques-5.jpg';
 
-import CorrectImage1 from '../assets/img/happy/hoyo-chibi-1.jpg'
-import CorrectImage2 from '../assets/img/happy/hoyo-chibi-2.jpg'
-import CorrectImage3 from '../assets/img/happy/hoyo-chibi-3.jpg'
+import CorrectImage1 from '../../assets/img/happy/hoyo-chibi-1.jpg'
+import CorrectImage2 from '../../assets/img/happy/hoyo-chibi-2.jpg'
+import CorrectImage3 from '../../assets/img/happy/hoyo-chibi-3.jpg'
 
-import IncorrectImage1 from '../assets/img/sad/hoyo-chibi-1.png';
-import IncorrectImage2 from '../assets/img/sad/hoyo-chibi-2.png';
-import IncorrectImage3 from '../assets/img/sad/hoyo-chibi-3.png';
-import IncorrectImage4 from '../assets/img/sad/hoyo-chibi-4.png';
+import IncorrectImage1 from '../../assets/img/sad/hoyo-chibi-1.png';
+import IncorrectImage2 from '../../assets/img/sad/hoyo-chibi-2.png';
+import IncorrectImage3 from '../../assets/img/sad/hoyo-chibi-3.png';
+import IncorrectImage4 from '../../assets/img/sad/hoyo-chibi-4.png';
 
 
 const QuizPage = () => {
