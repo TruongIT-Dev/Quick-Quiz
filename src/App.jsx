@@ -1,9 +1,9 @@
 import { Route, Routes } from "react-router-dom"
 
-import Home from "../pages/Home"
-import NotObeyRule from "../pages/Rule"
-import EndingPage from "../pages/EndPage"
-import QuizPage from "../pages/Quiz"
+import Home from './components/pages/Home';
+import QuizPage from './components/pages/Quiz';
+import NotObeyRule from "./components/pages/Rule";
+import EndingPage from './components/pages/EndPage';
 
 
 function App() {
