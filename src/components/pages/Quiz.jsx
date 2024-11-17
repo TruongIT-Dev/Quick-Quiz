@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Modal, Button, Image } from 'antd';
-import { questions } from '../apis/question';
+import { questions } from '../../apis/question';
 import { useNavigate } from 'react-router-dom';
 
 import '../../assets/css/quiz.css';
