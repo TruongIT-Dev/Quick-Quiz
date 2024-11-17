@@ -24,7 +24,7 @@ export default function Home() {
             <div className="container w-screen h-screen flex justify-center items-center mx-auto p-8">
                 <div id="home" className="flex justify-center items-center flex-col">
                     <h1 className="">Quick Quiz</h1>
-                    <a className="btn" href="/quiz">Bắt Đầu</a>
+                    <a className="btn" href="#" onClick={() => navigate("/quiz", { replace: true })}>Bắt Đầu</a>
                     <a className="btn" href="#" onClick={showModal}>Luật Chơi</a>
                 </div>
             </div>
@@ -32,7 +32,7 @@ export default function Home() {
             <Modal title="Luật Chơi Như Sau:" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}
                 footer={[
                     <Button key="back" type='primary' onClick={() => navigate("/not-obey-rule", { replace: true })}>
-                        Tôi đã không hiểu và sẽ không tuân thủ Luật Chơi    
+                        Tôi đã không hiểu và sẽ không tuân thủ Luật Chơi
                     </Button>,
                     <Button className='mt-4' key="back" type='primary' danger onClick={handleOk}>
                         Đã rõ Luật và sẵn sàng Chơi.

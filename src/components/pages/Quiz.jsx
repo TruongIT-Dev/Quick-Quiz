@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Modal, Button, Image } from 'antd';
 import { questions } from '../../apis/question';
-import { useNavigate } from 'react-router-dom';
+import { replace, useNavigate } from 'react-router-dom';
 
 import '../../assets/css/quiz.css';
 import '../../index.css';
@@ -78,7 +78,7 @@ const QuizPage = () => {
         // Check if this is the last question
         if (currentQuestionIndex >= questions.length - 1) {
             // If it is the last question, navigate to the result page
-            navigate('/ending');
+            navigate('/ending', { replace: true });
         } else {
             // Otherwise, move to the next question
             setCurrentQuestionIndex(currentQuestionIndex + 1);
