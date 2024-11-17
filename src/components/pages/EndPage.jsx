@@ -1,5 +1,5 @@
 import { Image } from "antd";
-import '../App.css';
+import '../../App.css';
 import { useState } from 'react';
 import { Button, Divider, Modal } from 'antd';
 import { useNavigate } from 'react-router-dom';

@@ -1,5 +1,5 @@
 import { Image } from "antd";
-import '../App.css';
+import '../../App.css';
 
 import Meme1 from '../assets/img/meme/meme-1.jpg';
 import Meme2 from '../assets/img/meme/meme-2.jpg';

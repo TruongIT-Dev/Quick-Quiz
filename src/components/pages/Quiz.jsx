@@ -3,8 +3,8 @@ import { Modal, Button, Image } from 'antd';
 import { questions } from '../apis/question';
 import { useNavigate } from 'react-router-dom';
 
-import '../assets/css/quiz.css';
-import '../index.css';
+import '../../assets/css/quiz.css';
+import '../../index.css';
 
 import Image1 from '../assets/img/question/chibi-ques-1.jpg';
 import Image2 from '../assets/img/question/chibi-ques-2.jpg';
